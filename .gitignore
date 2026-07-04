@@ -1,0 +1,37 @@
+# Python bytecode
+__pycache__/
+*.pyc
+*.pyo
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Environment and editor files
+.vscode/
+.env
+
+# macOS and Windows system files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Keep key project files tracked
+!App/
+!App/app.py
+!App/static/
+!App/templates/
+!Dataset/
+!Documentation/
+!Images/
+!Model/
+!Notebook/
+!README.md
+!requirements.txt
+!LICENSE

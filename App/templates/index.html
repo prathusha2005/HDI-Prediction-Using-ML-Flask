@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HDI Prediction App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="page-shell">
+        <header class="hero-card">
+            <div class="hero-badge">Machine Learning • Flask • HDI</div>
+            <h1>Human Development Index Predictor</h1>
+            <p>
+                Human Development Index (HDI) is a summary measure of a country's development based on
+                health, education, and income. This app uses a trained regression model to estimate HDI
+                from key socio-economic indicators.
+            </p>
+
+            <div class="category-grid">
+                <div class="category-card very-high">
+                    <strong>Very High</strong>
+                    <span>HDI ≥ 0.800</span>
+                </div>
+                <div class="category-card high">
+                    <strong>High</strong>
+                    <span>HDI ≥ 0.700</span>
+                </div>
+                <div class="category-card medium">
+                    <strong>Medium</strong>
+                    <span>HDI ≥ 0.550</span>
+                </div>
+                <div class="category-card low">
+                    <strong>Low</strong>
+                    <span>HDI &lt; 0.550</span>
+                </div>
+            </div>
+        </header>
+
+        <main class="content-grid">
+            <section class="form-card">
+                <h2>Predict HDI</h2>
+                <p class="section-intro">
+                    Fill in the details below to estimate the Human Development Index for a country.
+                </p>
+
+                <form method="post" action="/" id="prediction-form" novalidate>
+                    <div class="field-group">
+                        <label for="country_name">
+                            <span class="field-icon">🌍</span>
+                            Country Name (Optional)
+                        </label>
+                        <input
+                            type="text"
+                            id="country_name"
+                            name="country_name"
+                            placeholder="e.g. India"
+                            value="{{ form_data.get('country_name', '') }}"
+                        >
+                        <p class="helper-text">Add a country name to personalize the entry.</p>
+                    </div>
+
+                    <div class="field-group">
+                        <label for="life_expectancy">
+                            <span class="field-icon">🩺</span>
+                            Life Expectancy
+                        </label>
+                        <input
+                            type="number"
+                            id="life_expectancy"
+                            name="life_expectancy"
+                            step="any"
+                            min="40"
+                            max="90"
+                            placeholder="e.g. 74.5"
+                            value="{{ form_data.get('life_expectancy', '') }}"
+                            required
+                        >
+                        <p class="helper-text">Enter a value between 40 and 90 years.</p>
+                    </div>
+
+                    <div class="field-group">
+                        <label for="mean_years_schooling">
+                            <span class="field-icon">📚</span>
+                            Mean Years of Schooling
+                        </label>
+                        <input
+                            type="number"
+                            id="mean_years_schooling"
+                            name="mean_years_schooling"
+                            step="any"
+                            min="0"
+                            max="20"
+                            placeholder="e.g. 9.2"
+                            value="{{ form_data.get('mean_years_schooling', '') }}"
+                            required
+                        >
+                        <p class="helper-text">Enter a value between 0 and 20 years.</p>
+                    </div>
+
+                    <div class="field-group">
+                        <label for="expected_years_schooling">
+                            <span class="field-icon">🎓</span>
+                            Expected Years of Schooling
+                        </label>
+                        <input
+                            type="number"
+                            id="expected_years_schooling"
+                            name="expected_years_schooling"
+                            step="any"
+                            min="0"
+                            max="25"
+                            placeholder="e.g. 13.8"
+                            value="{{ form_data.get('expected_years_schooling', '') }}"
+                            required
+                        >
+                        <p class="helper-text">Enter a value between 0 and 25 years.</p>
+                    </div>
+
+                    <div class="field-group">
+                        <label for="gni_per_capita">
+                            <span class="field-icon">💵</span>
+                            Gross National Income (GNI) per Capita
+                        </label>
+                        <input
+                            type="number"
+                            id="gni_per_capita"
+                            name="gni_per_capita"
+                            step="any"
+                            min="500"
+                            max="100000"
+                            placeholder="e.g. 23000"
+                            value="{{ form_data.get('gni_per_capita', '') }}"
+                            required
+                        >
+                        <p class="helper-text">Enter a value between 500 and 100000 USD.</p>
+                    </div>
+
+                    <button type="submit">Predict HDI</button>
+                </form>
+
+                <div id="client-error" class="message error-message" hidden></div>
+
+                {% if error_message %}
+                <div class="message error-message">{{ error_message }}</div>
+                {% endif %}
+
+                {% if prediction is not none %}
+                <div class="result-card">
+                    <div class="result-row">
+                        <span class="result-label">Predicted HDI Score</span>
+                        <span class="result-value">{{ "%.3f"|format(prediction) }}</span>
+                    </div>
+                    <div class="result-row">
+                        <span class="result-label">Development Category</span>
+                        {% if 'Very High' in category %}
+                        <span class="result-badge badge-very-high">Very High Human Development</span>
+                        {% elif 'High' in category %}
+                        <span class="result-badge badge-high">High Human Development</span>
+                        {% elif 'Medium' in category %}
+                        <span class="result-badge badge-medium">Medium Human Development</span>
+                        {% else %}
+                        <span class="result-badge badge-low">Low Human Development</span>
+                        {% endif %}
+                    </div>
+                </div>
+                {% endif %}
+            </section>
+
+            <aside class="info-card">
+                <h3>Why this project matters</h3>
+                <p>
+                    This project demonstrates a complete machine learning workflow, from data preparation to
+                    model evaluation and web deployment. It is suitable for academic submissions, GitHub
+                    portfolios, and interview discussions.
+                </p>
+                <ul>
+                    <li>Professional and beginner-friendly design</li>
+                    <li>Validated inputs for reliable prediction</li>
+                    <li>Clear interpretation of the output</li>
+                </ul>
+            </aside>
+        </main>
+    </div>
+
+    <footer>
+        <p>Developed by Egala Durga Rao</p>
+    </footer>
+
+    <script>
+        const form = document.getElementById('prediction-form');
+        const clientError = document.getElementById('client-error');
+
+        form.addEventListener('submit', function (event) {
+            const fields = [
+                { id: 'life_expectancy', label: 'Life Expectancy', min: 40, max: 90 },
+                { id: 'mean_years_schooling', label: 'Mean Years of Schooling', min: 0, max: 20 },
+                { id: 'expected_years_schooling', label: 'Expected Years of Schooling', min: 0, max: 25 },
+                { id: 'gni_per_capita', label: 'Gross National Income (GNI) per Capita', min: 500, max: 100000 },
+            ];
+
+            let message = '';
+
+            fields.forEach(function (field) {
+                const input = document.getElementById(field.id);
+                const value = parseFloat(input.value);
+
+                if (input.value.trim() === '') {
+                    message = `${field.label} is required.`;
+                    return;
+                }
+
+                if (Number.isNaN(value)) {
+                    message = `${field.label} must be a valid number.`;
+                    return;
+                }
+
+                if (value < field.min || value > field.max) {
+                    message = `${field.label} must be between ${field.min} and ${field.max}.`;
+                }
+            });
+
+            if (message) {
+                event.preventDefault();
+                clientError.textContent = message;
+                clientError.hidden = false;
+            } else {
+                clientError.hidden = true;
+            }
+        });
+    </script>
+</body>
+</html>

@@ -14,6 +14,7 @@ A professional machine learning project for predicting the Human Development Ind
 ![HTML](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)
 ![CSS](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)
 ![MIT License](https://img.shields.io/badge/License-MIT-green.svg)
+![Render](https://img.shields.io/badge/Hosted%20on-Render-46E3B7?logo=render&logoColor=white)
 
 > ⭐ Beginner Friendly • Machine Learning • Flask • Portfolio Project
 
@@ -44,8 +45,16 @@ A professional machine learning project for predicting the Human Development Ind
 - [Learning Outcomes](#-learning-outcomes)
 - [Author](#-author)
 - [License](#-license)
+- [Live Demo](#-live-demo)
 
 ---
+## 🌐 Live Demo
+
+🚀 **Try the application online**
+
+👉 **https://hdi-prediction-using-ml-2.onrender.com**
+
+No installation required. Open the link and start predicting Human Development Index (HDI) values directly from your browser.
 
 ## 🎯 Project Overview
 
@@ -146,7 +155,7 @@ Linear Regression was selected because it is simple, interpretable, and effectiv
 ## ⚙ Installation
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/egala-durgarao/HDI-Prediction-Using-ML.git
 
 cd HDI-Prediction-Using-ML
 
@@ -181,6 +190,8 @@ http://127.0.0.1:5000/
 - ✅ Responsive UI
 - ✅ Input Validation
 - ✅ GitHub Portfolio Ready
+- ✅ Live Deployment on Render
+
 
 ---
 
@@ -195,12 +206,13 @@ http://127.0.0.1:5000/
 | R² Score | 0.9892 |
 | Web Framework | Flask |
 | Programming Language | Python |
+| Live Demo | Render |
 
 ---
 
 ## 🎮 Project Demo
 
-Users can open the Flask application and interact with the prediction form to estimate HDI values using real-world socio-economic inputs. The app supports input validation, shows the predicted HDI score, and displays the corresponding development category in a clean and beginner-friendly interface.
+Users can access the live web application through Render and predict Human Development Index (HDI) values by entering socio-economic indicators. The application validates user inputs, generates accurate predictions using the trained Linear Regression model, and displays the corresponding Human Development category in a clean and responsive interface.
 
 ---
 
@@ -273,7 +285,7 @@ HDI-Prediction-Using-ML
 ## 🚀 Future Improvements
 
 - [ ] Deploy on AWS
-- [ ] Deploy on Render
+- [ ] Deploy on Azure
 - [ ] Dockerize the application
 - [ ] Create a Streamlit version
 - [ ] Implement XGBoost
@@ -295,6 +307,7 @@ HDI-Prediction-Using-ML
 - [x] Model Comparison
 - [x] Flask Deployment
 - [x] GitHub Project Management
+- [x] Cloud Deployment using Render
 
 ---
 

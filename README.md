@@ -300,27 +300,30 @@ HDI-Prediction-Using-ML
 
 ## 👨‍💻 Author
 
+---
+
+# 👨‍💻 Author
+
 <div align="center">
 
-<p align="center">
-
-<a href="YOUR_GITHUB_LINK">
-<img src="https://img.shields.io/badge/GitHub-Profile-black?logo=github&logoColor=white">
+<a href="https://github.com/egala-durgarao">
+  <img src="https://img.shields.io/badge/GitHub-egala--durgarao-181717?style=for-the-badge&logo=github" alt="GitHub">
 </a>
 
-<a href="YOUR_LINKEDIN_LINK">
-<img src="https://img.shields.io/badge/LinkedIn-Profile-blue?logo=linkedin&logoColor=white">
+<a href="https://www.linkedin.com/in/durgaraoegala">
+  <img src="https://img.shields.io/badge/LinkedIn-Durga%20Rao-0A66C2?style=for-the-badge&logo=linkedin" alt="LinkedIn">
 </a>
 
-<a href="mailto:YOUR_EMAIL">
-<img src="https://img.shields.io/badge/Email-Contact-red?logo=gmail&logoColor=white">
+<a href="mailto:durgaegala6@gmail.com">
+  <img src="https://img.shields.io/badge/Email-durgaegala6%40gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email">
 </a>
 
-</p>
+<br><br>
 
 **Egala Durga Rao**
 
-B.Tech Computer Science and Engineering (Data Science)
+🎓 B.Tech Computer Science and Engineering (Data Science)  
+🏫 Swarnandhra College of Engineering & Technology
 
 </div>
 

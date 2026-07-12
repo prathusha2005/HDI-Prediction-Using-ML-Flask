@@ -56,6 +56,12 @@ A professional machine learning project for predicting the Human Development Ind
 
 No installation required. Open the link and start predicting Human Development Index (HDI) values directly from your browser.
 
+## 🎥 Demo Video
+
+The complete project demonstration is available in the *Video Demo* folder.
+
+📁 *Open Video Demo Folder:* [Video Demo](Video%20Demo/)
+
 ## 🎯 Project Overview
 
 This project aims to predict the Human Development Index (HDI) of countries using machine learning. HDI prediction is useful for understanding development trends, comparing countries, and analyzing the relationship between social and economic indicators.

@@ -2,7 +2,7 @@
 
 # Human Development Index (HDI) Prediction Using Machine Learning
 
-A professional machine learning project for predicting the Human Development Index (HDI) using socio-economic features and a trained Linear Regression model.
+A machine learning project for predicting the Human Development Index (HDI) using socio-economic indicators and a trained Linear Regression model.
 
 ![Python](https://img.shields.io/badge/Python-3.10%2B-blue?logo=python&logoColor=white)
 ![Flask](https://img.shields.io/badge/Flask-3.x-000000?logo=flask&logoColor=white)
@@ -13,8 +13,6 @@ A professional machine learning project for predicting the Human Development Ind
 ![Seaborn](https://img.shields.io/badge/Seaborn-0.13%2B-4C72B0?logo=seaborn&logoColor=white)
 ![HTML](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)
 ![CSS](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)
-![MIT License](https://img.shields.io/badge/License-MIT-green.svg)
-![Render](https://img.shields.io/badge/Hosted%20on-Render-46E3B7?logo=render&logoColor=white)
 
 > ⭐ Beginner Friendly • Machine Learning • Flask • Portfolio Project
 
@@ -26,55 +24,41 @@ A professional machine learning project for predicting the Human Development Ind
 
 ---
 
-## 📚 Table of Contents
+# 📚 Table of Contents
 
-- [Project Overview](#-project-overview)
-- [Features](#-features)
-- [Project Workflow](#-project-workflow)
-- [Technologies Used](#-technologies-used)
-- [Machine Learning Algorithm](#-machine-learning-algorithm)
-- [Dataset Information](#-dataset-information)
-- [Installation](#-installation)
-- [How to Run the Flask Application](#-how-to-run-the-flask-application)
-- [Project Highlights](#-project-highlights)
-- [Project Demo](#-project-demo)
-- [Project Folder Structure](#-project-folder-structure)
-- [Sample Prediction](#-sample-prediction)
-- [Screenshots](#-screenshots)
-- [Future Improvements](#-future-improvements)
-- [Learning Outcomes](#-learning-outcomes)
-- [Author](#-author)
-- [License](#-license)
-- [Live Demo](#-live-demo)
-
----
-## 🌐 Live Demo
-
-🚀 **Try the application online**
-
-👉 **https://hdi-prediction-using-ml-2.onrender.com**
-
-No installation required. Open the link and start predicting Human Development Index (HDI) values directly from your browser.
-
-## 🎥 Demo Video
-
-The complete project demonstration is available in the *Video Demo* folder.
-
-📁 *Open Video Demo Folder:* [Video Demo](Video%20Demo/)
-
-## 🎯 Project Overview
-
-This project aims to predict the Human Development Index (HDI) of countries using machine learning. HDI prediction is useful for understanding development trends, comparing countries, and analyzing the relationship between social and economic indicators.
+- Project Overview
+- Features
+- Project Workflow
+- Technologies Used
+- Machine Learning Algorithm
+- Dataset Information
+- Installation
+- How to Run the Flask Application
+- Project Highlights
+- Project Statistics
+- Project Folder Structure
+- Sample Prediction
+- Screenshots
+- Future Improvements
+- Learning Outcomes
+- Author
+- License
 
 ---
 
-## ✨ Features
+# 🎯 Project Overview
+
+This project predicts the Human Development Index (HDI) of countries using Machine Learning. It uses socio-economic indicators such as Life Expectancy, Mean Years of Schooling, Expected Years of Schooling, and Gross National Income (GNI) per Capita to estimate the HDI value and classify the country's development level.
+
+---
+
+# ✨ Features
 
 - Data preprocessing
 - Exploratory Data Analysis (EDA)
 - Correlation heatmap
 - Histograms
-- Feature importance
+- Feature importance analysis
 - Linear Regression model
 - Model comparison
 - Flask web application
@@ -85,7 +69,7 @@ This project aims to predict the Human Development Index (HDI) of countries usin
 
 ---
 
-## 🔄 Project Workflow
+# 🔄 Project Workflow
 
 ```text
 Dataset
@@ -102,8 +86,6 @@ Model Evaluation
 ↓
 Model Comparison
 ↓
-Feature Importance
-↓
 Save Model
 ↓
 Flask Web Application
@@ -113,64 +95,68 @@ HDI Prediction
 
 ---
 
-## 🛠 Technologies Used
+# 🛠 Technologies Used
 
 | Technology | Purpose |
-| --- | --- |
-| Python | Core programming language |
-| Pandas | Data manipulation and analysis |
-| NumPy | Numerical computing |
-| Matplotlib | Data visualization |
-| Seaborn | Statistical plotting |
-| Scikit-learn | Machine learning and model evaluation |
-| Flask | Web application development |
-| HTML | Frontend structure |
-| CSS | Styling and responsive design |
-| Joblib | Model serialization |
+|------------|---------|
+| Python | Core Programming |
+| Pandas | Data Analysis |
+| NumPy | Numerical Computing |
+| Matplotlib | Data Visualization |
+| Seaborn | Statistical Visualization |
+| Scikit-learn | Machine Learning |
+| Flask | Web Framework |
+| HTML | Frontend |
+| CSS | Styling |
+| Joblib | Model Serialization |
 
 ---
 
-## 🤖 Machine Learning Algorithm
+# 🤖 Machine Learning Algorithm
 
-Linear Regression was selected because it is simple, interpretable, and effective for predicting a continuous target such as HDI. Decision Tree Regressor and Random Forest Regressor were also compared to evaluate predictive performance.
+This project uses **Linear Regression** to predict HDI values.
+
+The model was compared with other regression algorithms.
 
 | Model | R² Score |
-| --- | ---: |
+|-------|----------|
 | Linear Regression | 0.9892 |
 | Decision Tree Regressor | 0.9210 |
 | Random Forest Regressor | 0.9719 |
 
-**🏆 Best Model: Linear Regression** achieved the best performance in this project.
+**Best Model:** Linear Regression
 
 ---
 
-## 📂 Dataset Information
+# 📂 Dataset Information
 
-- **Dataset Name:** HDI Dataset
-- **Number of Records:** 124
-- **Target Variable:** HDI
-- **Input Features:**
-  - Country
-  - Life Expectancy
-  - Mean Years of Schooling
-  - Expected Years of Schooling
-  - Gross National Income (GNI) per Capita
+- Dataset: HDI Dataset
+- Number of Records: 124
+- Target Variable: HDI
+
+### Input Features
+
+- Country
+- Life Expectancy
+- Mean Years of Schooling
+- Expected Years of Schooling
+- GNI per Capita
 
 ---
 
-## ⚙ Installation
+# ⚙ Installation
 
 ```bash
-git clone https://github.com/egala-durgarao/HDI-Prediction-Using-ML.git
+git clone https://github.com/prathusha2005/HDI-Prediction-Using-ML-Flask.git
 
-cd HDI-Prediction-Using-ML
+cd HDI-Prediction-Using-ML-Flask
 
 pip install -r requirements.txt
 ```
 
 ---
 
-## 🚀 How to Run the Flask Application
+# 🚀 Run the Flask Application
 
 ```bash
 cd App
@@ -178,54 +164,45 @@ cd App
 python app.py
 ```
 
-Open the application in your browser:
+Open your browser:
 
-```text
+```
 http://127.0.0.1:5000/
 ```
 
 ---
 
-## ✨ Project Highlights
+# ✨ Project Highlights
 
-- ✅ Machine Learning Project
-- ✅ Flask Web Application
-- ✅ Linear Regression Model
-- ✅ Model Comparison
-- ✅ Feature Importance Analysis
-- ✅ Responsive UI
-- ✅ Input Validation
-- ✅ GitHub Portfolio Ready
-- ✅ Live Deployment on Render
-
+- Machine Learning Project
+- Linear Regression Model
+- Flask Web Application
+- Model Evaluation
+- Responsive User Interface
+- Input Validation
+- GitHub Portfolio Project
 
 ---
 
-## 📊 Project Statistics
+# 📊 Project Statistics
 
 | Metric | Value |
-| --- | --- |
+|---------|-------|
 | Dataset Size | 124 Records |
 | Number of Features | 5 |
 | Target Variable | HDI |
-| Best Performing Model | Linear Regression |
+| Best Model | Linear Regression |
 | R² Score | 0.9892 |
-| Web Framework | Flask |
-| Programming Language | Python |
-| Live Demo | Render |
+| Framework | Flask |
+| Language | Python |
 
 ---
 
-## 🎮 Project Demo
-
-Users can access the live web application through Render and predict Human Development Index (HDI) values by entering socio-economic indicators. The application validates user inputs, generates accurate predictions using the trained Linear Regression model, and displays the corresponding Human Development category in a clean and responsive interface.
-
----
-
-## 📁 Project Folder Structure
+# 📁 Project Folder Structure
 
 ```text
-HDI-Prediction-Using-ML
+HDI-Prediction-Using-ML-Flask
+
 │
 ├── Dataset/
 │      HDI.csv
@@ -252,102 +229,78 @@ HDI-Prediction-Using-ML
 
 ---
 
-## 📈 Sample Prediction
+# 📈 Sample Prediction
 
 | Input | Value |
-| --- | --- |
+|--------|-------|
 | Country | India |
 | Life Expectancy | 70 |
 | Mean Years of Schooling | 7 |
 | Expected Years of Schooling | 13 |
 | GNI per Capita | 7000 |
 
-**Predicted HDI:** approximately **0.68**
+**Predicted HDI:** 0.68
 
 **Development Category:** Medium Human Development
 
 ---
 
-## 📸 Screenshots
-
+# 📸 Screenshots
 
 <p align="center">
-  <img src="Images/correlation_heatmap.png" width="45%">
-  <img src="Images/model_comparison.png" width="45%">
+<img src="Images/correlation_heatmap.png" width="45%">
+<img src="Images/model_comparison.png" width="45%">
 </p>
 
 <p align="center">
-  <img src="Images/feature_importance.png" width="45%">
-  <img src="Images/actual_vs_predicted.png" width="45%">
+<img src="Images/feature_importance.png" width="45%">
+<img src="Images/actual_vs_predicted.png" width="45%">
 </p>
 
 <p align="center">
-  <img src="Images/flask_home.png" width="45%">
-  <img src="Images/prediction_result.png" width="45%">
+<img src="Images/flask_home.png" width="45%">
+<img src="Images/prediction_result.png" width="45%">
 </p>
 
 ---
 
-## 🚀 Future Improvements
+# 🚀 Future Improvements
 
-- [ ] Deploy on AWS
-- [ ] Deploy on Azure
-- [ ] Dockerize the application
-- [ ] Create a Streamlit version
-- [ ] Implement XGBoost
-- [ ] Perform Hyperparameter Tuning
-- [ ] Train on a Larger Dataset
-- [ ] Enable Real-time HDI Prediction
-- [ ] Develop a REST API
-- [ ] Add User Authentication
-
----
-
-## 📚 Learning Outcomes
-
-- [x] Data Cleaning
-- [x] Exploratory Data Analysis
-- [x] Feature Engineering
-- [x] Machine Learning
-- [x] Model Evaluation
-- [x] Model Comparison
-- [x] Flask Deployment
-- [x] GitHub Project Management
-- [x] Cloud Deployment using Render
+- Deploy on AWS
+- Deploy on Azure
+- Dockerize the application
+- Build a Streamlit version
+- Implement XGBoost
+- Hyperparameter tuning
+- Train with larger datasets
+- Develop REST APIs
+- Add user authentication
 
 ---
 
-## 👨‍💻 Author
+# 📚 Learning Outcomes
+
+- Data Cleaning
+- Exploratory Data Analysis
+- Machine Learning
+- Model Evaluation
+- Flask Development
+- GitHub Project Management
 
 ---
 
 # 👨‍💻 Author
 
-<div align="center">
+**Prathusha**
 
-<a href="https://github.com/egala-durgarao">
-  <img src="https://img.shields.io/badge/GitHub-egala--durgarao-181717?style=for-the-badge&logo=github" alt="GitHub">
-</a>
+GitHub: https://github.com/prathusha2005
 
-<a href="https://www.linkedin.com/in/durgaraoegala">
-  <img src="https://img.shields.io/badge/LinkedIn-Durga%20Rao-0A66C2?style=for-the-badge&logo=linkedin" alt="LinkedIn">
-</a>
+Repository:
 
-<a href="mailto:durgaegala6@gmail.com">
-  <img src="https://img.shields.io/badge/Email-durgaegala6%40gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email">
-</a>
-
-<br><br>
-
-**Egala Durga Rao**
-
-🎓 B.Tech Computer Science and Engineering (Data Science)  
-🏫 Swarnandhra College of Engineering & Technology
-
-</div>
+https://github.com/prathusha2005/HDI-Prediction-Using-ML-Flask
 
 ---
 
-## 📜 License
+# 📜 License
 
-This project is released under the MIT License.
+This project is intended for educational and learning purposes.
